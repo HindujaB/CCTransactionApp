@@ -2,8 +2,6 @@ import ballerina/test;
 import ballerina/http;
 import ballerina/io;
 
-http:Client clientEndpoint = check new ("http://localhost:" + appEndPoint.toString() + "/ccTransaction");
-
 class accNumberGenerator {
 
     boolean closed = false;
@@ -48,7 +46,7 @@ function testValidatorPositive() returns error? {
     stream<byte[], io:Error> testStream = new stream<byte[], io:Error>(gen);
     http:Request req = new;
     req.setByteStream(testStream, "text/plain");
-    http:Response res = check clientEndpoint->execute("POST", "/validator", testStream);
+    http:Response res = check endpoint->execute("POST", "/validator", testStream);
     test:assertEquals(res.getTextPayload(), "Withdrawal to account : 111222 is successfull!");
     io:Error? closeResult = testStream.close();
 }
@@ -60,7 +58,7 @@ function testValidatorNegative() returns error? {
     stream<byte[], io:Error> testStream = new stream<byte[], io:Error>(gen);
     http:Request req = new;
     req.setByteStream(testStream, "text/plain");
-    http:Response res = check clientEndpoint->execute("POST", "/validator", testStream);
+    http:Response res = check endpoint->execute("POST", "/validator", testStream);
     test:assertEquals(res.getTextPayload(), "Credit card is black listed. Access denied!");
     io:Error? closeResult = testStream.close();
 }

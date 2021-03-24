@@ -3,7 +3,8 @@ import ballerinax/mysql;
 import ballerina/sql;
 import CCTransactionApp.dbConnector;
 
-configurable int appEndPoint = ?;
+configurable int appPort = ?;
+configurable string appHost = ?;
 
 public function main() {
     connectDB();

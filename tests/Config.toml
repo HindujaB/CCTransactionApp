@@ -1,5 +1,6 @@
 [CCTransactionApp]
-appEndPoint = 9096
+appHost = "localhost"
+appPort = 9096
 
 [CCTransactionApp.dbConnector]
 username = "<USER_NAME>"

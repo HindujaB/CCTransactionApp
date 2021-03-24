@@ -4,8 +4,8 @@ import ballerina/regex;
 import CCTransactionApp.dbConnector;
 import ballerina/log;
 
-http:Client endpoint = check new ("http://localhost:" + appEndPoint.toString() + "/ccTransaction");
-public listener http:Listener appListener = new (appEndPoint);
+http:Client endpoint = check new ("http://" + appHost +":" + appPort.toString() + "/ccTransaction");
+public listener http:Listener appListener = new (appPort);
 
 service /ccTransaction on appListener {
 

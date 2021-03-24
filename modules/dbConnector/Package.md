@@ -3,7 +3,20 @@ Connects to a MySQL database and cache the blacklisted credit card accounts.
 # Overview
 This package connects to a MySQL database and populates a table with the details of black listed card holders.
 
-The database details can be configured through the configuration file `Config.toml`.
+The database details can be configured through the configuration file `Config.toml` in the following format.
+
+```toml
+[CCTransactionApp.dbConnector]
+username = "<USER_NAME>"
+password = "<PASSWORD>"
+
+[CCTransactionApp.dbConnector.database]
+host = "<DATABASE_HOST>"
+port = <DATABASE_PORT>
+name = "<DATABASE_NAME>"
+
+```
+
 
 The database can be constructed with following script, 
 
