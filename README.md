@@ -39,10 +39,10 @@ name = "<DATABASE_NAME>"
 The expected path is 
 
 ```
-http://localhost:<endpoint>/ccTransaction/validator
+http://<host>:<port>/ccTransaction/validator
 ```
  
-For example, if the endpoint is configured as `9096`, the expected request will be, 
+For example, if the endpoint is configured with host `localhost` and port `9096`, the expected request will be, 
 
 ```
 curl -d "111222:WD" -X POST http://localhost:9096/ccTransaction/validator
