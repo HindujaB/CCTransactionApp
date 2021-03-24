@@ -1,6 +1,6 @@
 [CCTransactionApp.dbConnector]
-username = "hinduja"
-password = "Hindu-007"
+username = "<USER_NAME>"
+password = "<PASSWORD>"
 
 [CCTransactionApp.dbConnector.database]
 port = 3306
