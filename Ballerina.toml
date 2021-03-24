@@ -1,0 +1,13 @@
+[package]
+org = "hinduja"
+name = "CCTransactionApp"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
+
+[[platform.java11.dependency]]
+artifactId = "mysql-connector-java"
+version = "8.0.23"
+path = "/home/hinduja/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar"
+groupId = "mysql"

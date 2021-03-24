@@ -1,0 +1,7 @@
+[CCTransactionApp.dbConnector]
+username = "hinduja"
+password = "Hindu-007"
+
+[CCTransactionApp.dbConnector.database]
+port = 3306
+name = "CREDIT_CARD"
